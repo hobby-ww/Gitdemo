@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
        Button bt=findViewById(R.id.Add);
        Button btSub=findViewById(R.id.sub);
+       Button btClear=findViewById(R.id.clear);
        TextView tx=findViewById(R.id.textView);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tx.setText(String.valueOf(var--));
+            }
+        });
+        btClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                var=0;
+                tx.setText(String.valueOf(var));
             }
         });
     }
